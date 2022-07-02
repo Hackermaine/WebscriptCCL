@@ -6,6 +6,7 @@ namespace WebscriptCCL
         bool bUname = false;
         bool bManName = false;
         bool bDept = false;
+        bool bApps = false;
         bool bLocation = false;
         byte locationID = 0;
         byte deptID = 0;
@@ -54,6 +55,12 @@ namespace WebscriptCCL
 
         private void chk_apps_SelectedIndexChanged(object sender, EventArgs e)
         {
+            bApps = true;
+            if(bUname && bManName && bLocation && bDept && bApps)
+            {
+                button1.BackColor = Color.Green;
+
+            }
            // chk_apps.SelectedItems
            //or 
            // chk_apps.SelectedIndices
