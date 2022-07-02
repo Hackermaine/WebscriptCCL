@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.txt_username = new System.Windows.Forms.TextBox();
             this.txt_manager = new System.Windows.Forms.TextBox();
             this.lbl_username = new System.Windows.Forms.Label();
@@ -43,7 +44,9 @@
             this.chk_apps = new System.Windows.Forms.CheckedListBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // txt_username
@@ -117,7 +120,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Times New Roman", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.label10.Location = new System.Drawing.Point(12, 9);
+            this.label10.Location = new System.Drawing.Point(13, 10);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(459, 54);
             this.label10.TabIndex = 16;
@@ -203,7 +206,7 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.Red;
+            this.button1.BackColor = System.Drawing.Color.LightGray;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button1.Location = new System.Drawing.Point(497, 303);
             this.button1.Name = "button1";
@@ -213,6 +216,15 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.Controls.Add(this.label10);
+            this.panel1.Location = new System.Drawing.Point(-1, -1);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(805, 79);
+            this.panel1.TabIndex = 25;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -220,6 +232,7 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(70)))), ((int)(((byte)(120)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.chk_apps);
@@ -227,7 +240,6 @@
             this.Controls.Add(this.rad_SAN);
             this.Controls.Add(this.rad_GNB);
             this.Controls.Add(this.rad_COS);
-            this.Controls.Add(this.label10);
             this.Controls.Add(this.lbl_apps);
             this.Controls.Add(this.lbl_department);
             this.Controls.Add(this.lbl_location);
@@ -235,10 +247,14 @@
             this.Controls.Add(this.lbl_username);
             this.Controls.Add(this.txt_manager);
             this.Controls.Add(this.txt_username);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "New User Program";
+            this.Text = "CCL New User Application";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -261,5 +277,6 @@
         private CheckedListBox chk_apps;
         private PictureBox pictureBox1;
         private Button button1;
+        private Panel panel1;
     }
 }
